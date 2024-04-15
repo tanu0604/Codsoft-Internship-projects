@@ -12,14 +12,22 @@ public class StudentGradeCalculator {
         System.out.print("Enter number of subjects: ");
         noOfSubjects=sc.nextInt();
         for ( i = 1; i <=noOfSubjects; i++) {
+            //Taking user's subject wise marks and calcualting the total marks scored
             System.out.print("Enter marks out of 100 in subject "+""+ i+": ");
             Marks=sc.nextInt();
             totalMarks+=Marks;
         }
+
+        //Calculating the average marks scored by the user
         AverageMarks=totalMarks/noOfSubjects;
+
+        //Displaying all the details : Username , Total marks achieved and the Average marks percentage
         System.out.println("Name of the user: "+UserName);
         System.out.println("The total marks is "+totalMarks);
-        System.out.println("Average marks scored: "+AverageMarks);
+        System.out.println("Average marks scored: "+AverageMarks+"%");
+
+
+        // Calculating the grade achieved by the student
         if(AverageMarks>=90 && AverageMarks<=100)
             System.out.println("Grade is A1");
         else if(AverageMarks>=80 && AverageMarks<90)
